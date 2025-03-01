@@ -1,9 +1,11 @@
 import React from 'react'
 import Try from "./page/Try"
+import Footer from "./page/Footer"
 
 const App = () => {
   return (
-    <Try/>
+    // <Try/>
+    <Footer/>
   )
 }
 
