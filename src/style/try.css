@@ -3,66 +3,67 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-  }
-  
-  body {
+}
+
+body {
     background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .header {
+}
+
+.header {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 1000px;
     width: 90%;
-  }
-  
-  .leftpart {
+}
+
+.leftpart {
     flex: 1;
     text-align: left;
     margin-right: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     color: #1877f2;
-    font-size: 50px;
-  }
-  
-  h3 {
+    font-size: 55px;
+}
+
+h3 {
     color: black;
-    font-size: 20px;
-  }
-  
-  .rightpart {
+    font-size: 25px;
+}
+
+.rightpart {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-  }
-  
-  /* Login Box */
-  .login-box {
+    margin-left: 10px;
+}
+
+/* Login Box */
+.login-box {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 350px;
     text-align: center;
-  }
-  
-  /* Input Fields */
-  .login-input {
+}
+
+/* Input Fields */
+.login-input {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
@@ -71,15 +72,15 @@
     font-size: 16px;
     outline: none;
     transition: 0.3s;
-  }
-  
-  .login-input:focus {
+}
+
+.login-input:focus {
     border-color: #1877f2;
     box-shadow: 0 0 5px rgba(24, 119, 242, 0.5);
-  }
-  
-  /* Login Button */
-  .login-btn {
+}
+
+/* Login Button */
+.login-btn {
     width: 100%;
     background-color: #1877f2;
     color: #fff;
@@ -91,44 +92,34 @@
     cursor: pointer;
     margin-top: 10px;
     transition: background 0.3s;
-  }
-  
-  .login-btn:hover {
+}
+
+.login-btn:hover {
     background-color: #166fe5;
-  }
-  
-  /* Forgot Password */
-  .forgot-password {
+}
+
+/* Forgot Password */
+.forgot-password {
     margin: 12px 0;
     font-size: 14px;
     color: #1877f2;
     cursor: pointer;
-  }
-  
-  .forgot-password:hover {
+}
+
+.forgot-password:hover {
     text-decoration: underline;
-  }
-  
-  /* Divider */
-  hr {
+}
+
+/* Divider */
+hr {
     border: none;
     height: 1px;
     background-color: #ddd;
     margin: 15px 0;
-  }
+}
 
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 10;
-  }
-  
-  /* Create Account Button */
-  .create-account-btn {
+/* Create Account Button */
+.create-account-btn {
     width: 100%;
     background-color: #42b72a;
     color: #fff;
@@ -139,78 +130,84 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-  }
-  
-  .create-account-btn:hover {
+}
+
+.create-account-btn:hover {
     background-color: #36a420;
-  }
-  
-  /* .overlay {
+}
+
+/* Background overlay when signup modal opens */
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 10;
-  } */
-  
-  .signup-modal {
+    z-index: 15; /* Ensures it appears above the login box */
+}
+
+/* Signup Modal (Centered) */
+.signup-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfectly centers the modal */
     background: #fff;
     width: 400px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
-    position: relative;
-  }
-  
-  /* Signup Header */
-  .signup-header {
+    z-index: 20; /* Ensures it appears above the overlay */
+}
+
+/* Signup Header */
+.signup-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
-  }
-  
-  .signup-header h2 {
+}
+
+.signup-header h2 {
     font-size: 24px;
     color: #333;
-  }
-  
-  .signup-header p {
+}
+
+.signup-header p {
     font-size: 14px;
     color: #666;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
     color: #888;
     transition: color 0.3s;
-  }
-  
-  .close-btn:hover {
+}
+
+.close-btn:hover {
     color: #333;
-  }
-  
-  /* Form Styling */
-  .signup-form {
+}
+
+/* Form Styling */
+.signup-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-top: 10px;
-  }
-  
-  /* Name Fields */
-  .name-fields {
+}
+
+/* Name Fields */
+.name-fields {
     display: flex;
     gap: 10px;
-  }
-  
-  .input-box {
+}
+
+.input-box {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -218,47 +215,47 @@
     font-size: 16px;
     outline: none;
     transition: 0.3s;
-  }
-  
-  .input-box:focus {
+}
+
+.input-box:focus {
     border-color: #1877f2;
     box-shadow: 0 0 5px rgba(24, 119, 242, 0.5);
-  }
-  
-  /* Full-Width Input */
-  .full-width {
+}
+
+/* Full-Width Input */
+.full-width {
     width: 100%;
-  }
-  
-  /* Birthday Section */
-  .birthday-section p,
-  .gender-section p {
+}
+
+/* Birthday Section */
+.birthday-section p,
+.gender-section p {
     text-align: left;
     font-weight: bold;
     margin: 10px 0 5px;
-  }
-  
-  .birthday-fields {
+}
+
+.birthday-fields {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .birthday-fields select {
+}
+
+.birthday-fields select {
     width: 32%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-  }
-  
-  /* Gender Section */
-  .gender-options {
+}
+
+/* Gender Section */
+.gender-options {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .gender-options label {
+}
+
+.gender-options label {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -268,30 +265,30 @@
     width: 30%;
     cursor: pointer;
     font-size: 14px;
-  }
-  
-  .gender-options input {
+}
+
+.gender-options input {
     cursor: pointer;
-  }
-  
-  /* Terms */
-  .terms {
+}
+
+/* Terms */
+.terms {
     font-size: 12px;
     color: #666;
     margin-top: 10px;
-  }
-  
-  .terms .blue {
+}
+
+.terms .blue {
     color: #1877f2;
     cursor: pointer;
-  }
-  
-  .terms .blue:hover {
+}
+
+.terms .blue:hover {
     text-decoration: underline;
-  }
-  
-  /* Signup Button */
-  .signup-btn {
+}
+
+/* Signup Button */
+.signup-btn {
     width: 100%;
     background-color: #42b72a;
     color: white;
@@ -303,8 +300,8 @@
     cursor: pointer;
     margin-top: 10px;
     transition: background 0.3s;
-  }
-  
-  .signup-btn:hover {
+}
+
+.signup-btn:hover {
     background-color: #36a420;
-  }
+}
