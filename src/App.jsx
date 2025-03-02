@@ -1,11 +1,13 @@
 import React from 'react'
 import Try from "./page/Try"
-import Footer from "./page/Footer"
+// import Footer from "./page/Footer"
+ import Image from "./page/Image"
 
 const App = () => {
   return (
     // <Try/>
-    <Footer/>
+    // <Footer/>
+    <Image/>
   )
 }
 
