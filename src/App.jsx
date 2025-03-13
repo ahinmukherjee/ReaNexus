@@ -1,15 +1,17 @@
 import React from 'react'
-import Try from "./page/Try"
+// import Try from "./page/Try"
 // import Footer from "./page/Footer"
 //  import Image from "./page/Image"
-import Ui from "./page/ui"
+// import Ui from "./page/ui"
+import Tab from "./page/Tab"
 
 const App = () => {
   return (
     // <Try/>
     // <Footer/>
     // <Image/>
-    <Ui/>
+    // <Ui/>
+    <Tab/>
   )
 }
 
