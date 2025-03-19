@@ -3,7 +3,12 @@ import React from 'react'
 // import Footer from "./page/Footer"
 //  import Image from "./page/Image"
 // import Ui from "./page/ui"
-import Tab from "./page/Tab"
+// import Tab from "./page/Tab"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './page/home'
+import Contact  from './page/contact'
+import Header from './page/header'
+import About from './page/about'
 
 const App = () => {
   return (
@@ -11,7 +16,16 @@ const App = () => {
     // <Footer/>
     // <Image/>
     // <Ui/>
-    <Tab/>
+    // <Tab/>
+    <Router>
+      <Header/>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/contact' element={<Contact/>} />
+        </Routes>
+
+    </Router>
   )
 }
 
